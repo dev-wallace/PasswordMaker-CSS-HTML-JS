@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+:root {
+    --color-primary-1: #8BC34A;
+    --color-primary-2: #8BC34AA6;
+    --color-neutral-1: #f8fafc;
+    --color-neutral-2: #24232b;
+    --color-neutral-3: #13121a;
+
+}
 
 * {
     margin: 0;
@@ -6,4 +14,106 @@
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
 }
+body{
+    display: flex; /* Flexbox é usado para centralizar conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    background-color: var(--color-neutral-3);
+}
 
+#container {
+    display: flex; /* Define o contêiner como um flexbox */
+    flex-direction: column; /* Alinha os itens em uma coluna vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 12px; 
+    /* Adiciona um espaçamento de 12px entre os itens */
+}
+#password_img{
+    width: 100px;
+}
+#title{
+    color: var(--color-neutral-1);
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+#password_container {
+    width: 100%; /* Define a largura do contêiner password como 100% do elemento pai */
+    max-width: 400px; /* Define a largura máxima do contêiner como 400px */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; /* Alinha os itens ao longo do eixo verticalmente ao centro */
+    background-color: var(--color-neutral-2); 
+    color: var(--color-neutral-1);
+    border-radius: 8px; /* Adiciona cantos arredondados com raio de 8px */
+    padding: 8px 18px; /* e o comprimento dentro de password (padding== preenchimento)  */
+}
+
+#password{
+    white-space: nowrap ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#copy{
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary-1);
+    height: 40px; /* Define a altura do botão*/
+    width: 30px; /* Define a largura do botão*/
+    font-size: 16px; /* Define o tamanho do botão*/
+    cursor: pointer; /* Muda o cursor para uma maozinha quando colocar o mouse em cima do botao*/
+    transition: color .4s;
+}   
+#copy:hover{
+    color: var(--color-primary-2); /* Altera a cor do botão quando o coloca o mouse em cima  */
+}
+
+#password_items {
+    width: 400px;
+    background-color: var(--color-neutral-2); 
+    color: var(--color-neutral-1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 8px;
+}
+.item {
+    
+    gap: 8px;
+
+}
+#size {
+    width: 50px;
+    text-align: center;
+    border:none;
+    border-radius: 4px;
+}
+#size::-webkit-inner-spin-button,
+#size::-webkit-outer-spin-button{
+    opacity: 1;
+
+}
+#size:focus{
+    outline: 1px solid var(--color-primary-1);
+}
+#generate{
+    background-color: var(--color-primary-1);
+    border:none;
+    margin-top: 12px;
+    padding: 10px 0px;
+    border-radius: 4px;
+    color: var(--color-neutral-3);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color .4s;
+    
+}
+#generate:hover {
+    background-color: var(--color-primary-2);
+ 
+}

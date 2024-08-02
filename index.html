@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+        
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+       <!-- Adiciona palavras-chave para SEO (otimização para motores de busca) -->
     <meta name = "keywords" content = "PasswordMaker-CSS-HTML-JS, Gerador de senhas ">
-
+    <!-- Importa o CSS do Font Awesome, uma biblioteca de ícones -->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- Define o título da página, que aparece na aba do navegador -->
     <title>PasswordMaker-CSS-HTML-JS</title>
+
+     <!-- Importa o CSS da biblioteca Toastify para notificações -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Importa o CSS personalizado para a página -->
     <link rel="stylesheet" href="src/styles/style.css">
+
+
 </head>
 <body>
+      <!-- Contém todo o conteúdo visível da página -->
     <div id="container">
-        <img src="src/images/illustration.svg" alt="">
+             <!-- Uma imagem ilustrativa -->
+        <img src="src/images/illustration.svg" id ="password_img"alt="">
+        
+         <!-- Um cabeçalho que serve como título da página -->
         <h1 id="title">Generate Password</h1>
+        <!-- Um contêiner para a senha gerada e o botão de copiar -->
         <div id="password_container">
-            <span id="password"></span>
+
+            <!-- elemento de texto para exibir a senha gerada -->
+            <span id="password">wallace the bast nao tem como!</span>
             <button id="copy">
                 <i class="fa-solid fa-copy"></i>
             </button>
         </div>
-        <div id="password_item"></div>
+        <div id="password_items">
 
         <div class="item">
             <input id="size" name ="size" type="number">
@@ -68,6 +85,7 @@
             </button>
         </div>
     </div>
+
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="src/javascript/script.js"></script>
 </body>

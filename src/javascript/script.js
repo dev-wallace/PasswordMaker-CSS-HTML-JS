@@ -26,6 +26,13 @@ function getCharTypes() {
 
     return charTypes;
 }
+
+function getPasswordSize(){
+    const size = document.querySelector('#size').value;
+    return size;
+
+}
+// Função para obter um índice aleatório de tipos de caracteres
 function randomCharType(charTypes){
     const randomIndex = Math.floor(Math.random()*charTypes.length);
     
@@ -34,9 +41,12 @@ function randomCharType(charTypes){
 
 }
 
+ 
 
-document.querySelector('#generate').addEventListener('click',function(){
-    console.log(randomCharType(getCharTypes()));
+ document.querySelector('#generate').addEventListener('click', function() {
+    //console.log(randomCharType(getCharTypes()));
+    console.log(getPasswordSize());
 });
+
 
 

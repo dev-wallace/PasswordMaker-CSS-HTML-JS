@@ -29,24 +29,47 @@ function getCharTypes() {
 
 function getPasswordSize(){
     const size = document.querySelector('#size').value;
+
+    if (size < 4 || size >128 || isNaN(size)) {
+
+        alert("Tamanho inválido, digite um número entre 4 e 128!",);
+        return null;
+    }
+    
     return size;
 
 }
-// Função para obter um índice aleatório de tipos de caracteres
-function randomCharType(charTypes){
-    const randomIndex = Math.floor(Math.random()*charTypes.length);
+
+// Função para obter um caractere aleatório de um dos tipos de caracteres
+function randomCharType(charTypes) {
+    // Gera um índice aleatório para selecionar um dos tipos de caracteres disponíveis.
+    const randomIndex = Math.floor(Math.random() * charTypes.length);
     
-    return randomIndex
-
-
+    // Seleciona um tipo de caractere da lista charTypes usando o índice aleatório gerado na linha anterior.
+    const selectedType = charTypes[randomIndex];
+    
+    // Gera um índice aleatório para selecionar um caractere específico dentro do tipo de caractere selecionado
+    const randomCharIndex = Math.floor(Math.random() * selectedType.length);
+    
+    // Retorna o caractere específico selecionado
+    return selectedType[randomCharIndex];
 }
 
+
  
+function generatePassword(size, charTypes){
+
+    let passwordGenerated = "";
+
+
+   for(var i = 0; i< size; i++){
+    passwordGenerated+=randomCharType(charTypes)
+
+   }
+    return passwordGenerated;
+}
 
  document.querySelector('#generate').addEventListener('click', function() {
     //console.log(randomCharType(getCharTypes()));
-    console.log(getPasswordSize());
+    console.log(generatePassword(getPasswordSize(), getCharTypes() ));
 });
-
-
-

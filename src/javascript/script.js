@@ -32,8 +32,8 @@ function getPasswordSize(){
 
     if (size < 4 || size >128 || isNaN(size)) {
 
-        alert("Tamanho inválido, digite um número entre 4 e 128!",);
-        return null;
+        
+        
     }
     
     return size;
@@ -70,6 +70,16 @@ function generatePassword(size, charTypes){
 }
 
  document.querySelector('#generate').addEventListener('click', function() {
-    //console.log(randomCharType(getCharTypes()));
-    console.log(generatePassword(getPasswordSize(), getCharTypes() ));
+  const size = getPasswordSize();
+  const charTypes = getCharTypes();
+  const passwordGenerated = generatePassword(size,charTypes);
+
+ 
+
+
+
+//usando o .textContent para passar para definir o conteúdo da div com id 'password',
+// exibindo a senha gerada (passwordGenerated) dentro do campo apropriado.
+document.querySelector('#password').textContent = passwordGenerated; 
+
 });

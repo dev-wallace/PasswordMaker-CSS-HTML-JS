@@ -50,6 +50,7 @@ body{
     padding: 8px 18px; /* e o comprimento dentro de password (padding== preenchimento)  */
 }
 
+
 #password{
     white-space: nowrap ;
     overflow: hidden;

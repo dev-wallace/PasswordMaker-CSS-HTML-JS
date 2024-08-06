@@ -100,3 +100,8 @@ function massage (text,background){
 document.querySelector('#password').textContent = passwordGenerated; 
 
 });
+document.querySelector('#copy').addEventListener('click', function(){
+navigator.clipboard.writeText(document.querySelector('#password').textContent);
+
+    massage ('Senha copiada com sucesso !','#84cc16');
+});

@@ -32,8 +32,15 @@ function getPasswordSize(){
 
     if (size < 4 || size >128 || isNaN(size)) {
 
-        
-        
+        Toastify({
+            text: 'Tamanho inválido, digite um número entre 4 e 128!', 
+            duration: 3000,
+            style:{
+                background: '#dc2626',
+                boxShadow: 'none'
+            }
+        }).showToast();
+        return null;
     }
     
     return size;

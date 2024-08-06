@@ -31,15 +31,10 @@ function getPasswordSize(){
     const size = document.querySelector('#size').value;
 
     if (size < 4 || size >128 || isNaN(size)) {
-
-        Toastify({
-            text: 'Tamanho inválido, digite um número entre 4 e 128!', 
-            duration: 3000,
-            style:{
-                background: '#dc2626',
-                boxShadow: 'none'
-            }
-        }).showToast();
+        //usando as variaveis criadas a funcao de masssage 
+        massage('Tamanho inválido, digite um número entre 4 e 128!','#dc2626');
+      
+    
         return null;
     }
     
@@ -75,11 +70,26 @@ function generatePassword(size, charTypes){
    }
     return passwordGenerated;
 }
+function massage (text,background){
+    Toastify({
+        text: text, 
+        duration: 3000,
+        style:{
+            background: background,
+            boxShadow: 'none'
+        }
+    }).showToast();
+
+}
 
  document.querySelector('#generate').addEventListener('click', function() {
   const size = getPasswordSize();
   const charTypes = getCharTypes();
   const passwordGenerated = generatePassword(size,charTypes);
+  
+  if(!charTypes.length){
+    massage('Selecione pelo menos um tipo de caractare! ' , '#dc2626')
+  }
 
  
 

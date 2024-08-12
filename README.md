@@ -35,4 +35,4 @@ Este projeto é um gerador de senhas simples e personalizável desenvolvido com 
 
 1. **Clone o Repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/seu-usuario/seu-repositorio.git](https://github.com/dev-wallace/PasswordMaker-CSS-HTML-JS.git
